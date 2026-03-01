@@ -7,59 +7,202 @@
   <style>
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; line-height: 1.6; }
     h2 { margin-top: 1.5em; }
+    .lang-buttons { margin-bottom: 20px; }
+    .lang-buttons button {
+      padding: 8px 14px;
+      margin-right: 8px;
+      border: 1px solid #ccc;
+      background: #f5f5f5;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .lang-buttons button.active {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
   </style>
 </head>
 <body>
 
+<div class="lang-buttons">
+  <button id="btn-en" class="active" onclick="showLang('en')">English</button>
+  <button id="btn-vi" onclick="showLang('vi')">Tiếng Việt</button>
+</div>
+
+<!-- ===================== ENGLISH VERSION ===================== -->
+
+<div id="en" class="lang-content active">
+
 <h1>Privacy Policy</h1>
-<p>This Privacy Policy applies to the Ovulation Tracker app (hereafter referred to as "Application") developed by Phan Nhat Dang ("Service Provider") as a freemium service. This service is intended for use as-is.</p>
+
+<p>This Privacy Policy applies to the Ovulation Tracker app (hereafter referred to as the "Application") developed by Phan Nhat Dang (the "Service Provider") as a freemium service. This service is provided as-is.</p>
 
 <h2>Information Collection and Use</h2>
-<p>The Application stores most cycle and fertility-related data <strong>locally on your device</strong>. This includes period start dates, cycle length, ovulation predictions, fertile windows, and user-entered notes. These data are <strong>not uploaded to any server</strong> unless explicitly stated or required for a particular feature in the future.</p>
 
-<p><strong>No personally identifiable information</strong> (such as name, email, phone number, or address) is collected or required to use the Application.</p>
+<p>The Application stores most cycle and fertility-related data <strong>locally on your device</strong>. This includes period start dates, cycle length, ovulation predictions, fertile windows, basal body temperature records, and user-entered notes. These data are <strong>not uploaded to any server</strong> unless explicitly stated for a specific feature.</p>
 
-<p>In some cases, the Application may collect <strong>non-personal, anonymous technical data</strong>, such as:</p>
+<p><strong>No personally identifiable information</strong> (such as name, email address, phone number, or physical address) is collected or required to use the Application.</p>
+
+<p>In some cases, the Application may collect <strong>non-personal and anonymous technical data</strong>, including:</p>
+
 <ul>
-  <li>Device type and OS version</li>
-  <li>Crash logs and performance statistics</li>
-  <li>General usage data (e.g., screen views, session duration)</li>
+  <li>Device type and operating system version</li>
+  <li>Crash reports and performance logs</li>
+  <li>General usage statistics (e.g., screen views, session duration)</li>
 </ul>
-<p>This anonymous data is used solely to improve app performance and user experience.</p>
+
+<p>This anonymous data is used solely to improve the stability, performance, and user experience of the Application.</p>
 
 <h2>Third-Party Services</h2>
-<p>The Application integrates with trusted third-party services to provide essential features such as analytics and subscription management:</p>
+
+<p>The Application integrates trusted third-party services to support analytics and subscription management:</p>
+
 <ul>
-  <li><strong>Firebase</strong> – for anonymous analytics and crash reporting</li>
-  <li><strong>RevenueCat</strong> – for managing in-app purchases and subscription status</li>
+  <li><strong>Firebase</strong> – anonymous analytics and crash reporting</li>
+  <li><strong>RevenueCat</strong> – in-app purchase and subscription management</li>
 </ul>
 
-<p>These third parties may collect certain non-identifiable technical data (e.g., device ID, purchase receipts) in accordance with their own privacy policies:</p>
+<p>These services may collect limited non-identifiable technical data (e.g., device identifiers, purchase receipts) in accordance with their own privacy policies:</p>
+
 <ul>
   <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
   <li><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a></li>
 </ul>
 
 <h2>Your Privacy Choices</h2>
-<p>You may disable analytics tracking through system settings on your device (iOS/Android). You may also delete the app at any time to stop all data collection and usage.</p>
-<p>If you have submitted data and wish to request deletion or have any privacy-related questions, please contact us at: <strong>phannhatd@gmail.com</strong>.</p>
 
-<h2>Children's Privacy</h2>
-<p>The Application is not directed to children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided personal information, please contact us immediately.</p>
+<p>You may disable analytics tracking through system settings on your device. You may uninstall the Application at any time to stop future data collection.</p>
+
+<p>If you have privacy-related questions or wish to request data deletion, please contact us at: <strong>phannhatd@gmail.com</strong>.</p>
+
+<h2>Children’s Privacy</h2>
+
+<p>The Application is not intended for children under the age of 13. We do not knowingly collect personal information from children.</p>
 
 <h2>Security</h2>
-<p>We take reasonable measures to ensure your data is kept secure. However, please note that no digital system can be guaranteed 100% secure. As most health data remains on your device, it is your responsibility to protect access to your phone or tablet.</p>
+
+<p>We take reasonable technical and organizational measures to protect your data. However, no digital system can guarantee absolute security. Since most cycle data remains on your device, you are responsible for protecting access to your device.</p>
 
 <h2>Disclaimer</h2>
-<p>The information provided by this Application is for educational and informational purposes only. It is <strong>not intended to be medical advice</strong> and should not be used to diagnose or treat any health condition. Always consult a qualified healthcare provider for medical concerns.</p>
-<p>The Service Provider is not responsible for any decision or action taken based on the data, predictions, or insights generated by the Application. All usage is at your own risk.</p>
-<p>By starting any form of calculation, fertility tracking, or data input within the Application, you confirm that you have read and agreed to this Privacy Policy, including its disclaimers.</p>
+
+<p>The information provided by the Application is for educational and informational purposes only. It is <strong>not medical advice</strong> and should not be used to diagnose or treat any health condition.</p>
+
+<p>Ovulation predictions and fertile window calculations are based on user-entered data and standard calculation methods. They may not be accurate for all individuals.</p>
+
+<p>Always consult a qualified healthcare provider for concerns related to menstrual health, fertility, or pregnancy planning.</p>
+
+<p>The Service Provider is not responsible for any decisions or actions taken based on the data, predictions, or insights generated by the Application. Use of the Application is at your own risk.</p>
+
+<h2>Use of Artificial Intelligence in Content Creation</h2>
+
+<p>Some illustrative images and language refinements in this Application may be generated or assisted by artificial intelligence technologies during the content creation process.</p>
+
+<p>AI tools are used solely to support content production and translation. They do not independently provide medical diagnoses or personalized medical advice.</p>
+
+<p>All health-related information is reviewed and edited to ensure clarity and accuracy. The information provided in this Application is for general educational purposes only and does not replace professional medical consultation.</p>
+
+<p>Translations may be assisted by AI-based language tools and are reviewed for accuracy.</p>
 
 <h2>Changes to This Policy</h2>
-<p>This Privacy Policy may be updated from time to time. Any changes will be posted on this page with an updated effective date. We recommend reviewing this policy regularly to stay informed.</p>
 
-<p><strong>Effective Date:</strong> 2025-06-02</p>
+<p>This Privacy Policy may be updated periodically. Updates will be posted on this page with a revised effective date. We recommend reviewing it regularly.</p>
+
+<p><strong>Effective Date:</strong> 2026-03-01</p>
 <p><strong>Contact:</strong> phannhatd@gmail.com</p>
+
+</div>
+
+<!-- ===================== VIETNAMESE VERSION ===================== -->
+
+<div id="vi" class="lang-content">
+
+<h1>Chính sách quyền riêng tư</h1>
+
+<p>Chính sách quyền riêng tư này áp dụng cho ứng dụng Ovulation Tracker (sau đây gọi là "Ứng dụng") được phát triển bởi Phan Nhat Dang ("Nhà cung cấp dịch vụ") dưới hình thức freemium. Dịch vụ được cung cấp theo hiện trạng.</p>
+
+<h2>Thu thập và sử dụng thông tin</h2>
+
+<p>Ứng dụng lưu trữ phần lớn dữ liệu chu kỳ kinh nguyệt và khả năng sinh sản <strong>trực tiếp trên thiết bị của bạn</strong>. Bao gồm ngày bắt đầu kỳ kinh, độ dài chu kỳ, dự đoán rụng trứng, cửa sổ thụ thai, nhiệt độ cơ bản cơ thể và ghi chú cá nhân. Các dữ liệu này <strong>không được tải lên bất kỳ máy chủ nào</strong> trừ khi có thông báo rõ ràng cho một tính năng cụ thể.</p>
+
+<p><strong>Ứng dụng không thu thập thông tin nhận dạng cá nhân</strong> (như tên, email, số điện thoại hoặc địa chỉ).</p>
+
+<p>Trong một số trường hợp, Ứng dụng có thể thu thập dữ liệu kỹ thuật ẩn danh bao gồm:</p>
+
+<ul>
+  <li>Loại thiết bị và phiên bản hệ điều hành</li>
+  <li>Báo cáo lỗi và dữ liệu hiệu suất</li>
+  <li>Thống kê sử dụng chung (ví dụ: màn hình đã xem, thời lượng phiên)</li>
+</ul>
+
+<p>Dữ liệu này chỉ nhằm mục đích cải thiện độ ổn định, hiệu suất và trải nghiệm người dùng.</p>
+
+<h2>Dịch vụ bên thứ ba</h2>
+
+<p>Ứng dụng tích hợp các dịch vụ bên thứ ba đáng tin cậy nhằm hỗ trợ phân tích và quản lý đăng ký:</p>
+
+<ul>
+  <li><strong>Firebase</strong> – phân tích ẩn danh và báo cáo lỗi</li>
+  <li><strong>RevenueCat</strong> – quản lý mua hàng trong ứng dụng và đăng ký</li>
+</ul>
+
+<p>Các dịch vụ này có thể thu thập dữ liệu kỹ thuật không định danh theo chính sách riêng của họ.</p>
+
+<h2>Lựa chọn quyền riêng tư của bạn</h2>
+
+<p>Bạn có thể tắt theo dõi phân tích thông qua cài đặt hệ thống của thiết bị. Bạn cũng có thể gỡ cài đặt Ứng dụng bất kỳ lúc nào để ngừng mọi hoạt động thu thập dữ liệu.</p>
+
+<p>Nếu bạn có câu hỏi liên quan đến quyền riêng tư hoặc muốn yêu cầu xóa dữ liệu, vui lòng liên hệ: <strong>phannhatd@gmail.com</strong>.</p>
+
+<h2>Quyền riêng tư của trẻ em</h2>
+
+<p>Ứng dụng không dành cho trẻ em dưới 13 tuổi và không cố ý thu thập thông tin cá nhân từ trẻ em.</p>
+
+<h2>Bảo mật</h2>
+
+<p>Chúng tôi áp dụng các biện pháp kỹ thuật và tổ chức hợp lý nhằm bảo vệ dữ liệu của bạn. Tuy nhiên, không có hệ thống kỹ thuật số nào đảm bảo an toàn tuyệt đối. Vì phần lớn dữ liệu chu kỳ được lưu trên thiết bị của bạn, bạn có trách nhiệm bảo vệ quyền truy cập vào thiết bị của mình.</p>
+
+<h2>Tuyên bố miễn trừ</h2>
+
+<p>Thông tin trong Ứng dụng chỉ nhằm mục đích giáo dục và cung cấp thông tin. Đây <strong>không phải là tư vấn y tế</strong> và không được sử dụng để chẩn đoán hoặc điều trị bất kỳ tình trạng sức khỏe nào.</p>
+
+<p>Dự đoán rụng trứng và tính toán cửa sổ thụ thai dựa trên dữ liệu bạn nhập và các phương pháp tính toán tiêu chuẩn. Kết quả có thể không chính xác đối với tất cả mọi người.</p>
+
+<p>Bạn nên tham khảo ý kiến chuyên gia y tế đối với các vấn đề liên quan đến sức khỏe sinh sản hoặc kế hoạch mang thai.</p>
+
+<p>Nhà cung cấp dịch vụ không chịu trách nhiệm đối với bất kỳ quyết định hoặc hành động nào dựa trên dữ liệu hoặc dự đoán từ Ứng dụng. Việc sử dụng Ứng dụng hoàn toàn do bạn tự chịu trách nhiệm.</p>
+
+<h2>Sử dụng Trí tuệ Nhân tạo trong quá trình tạo nội dung</h2>
+
+<p>Một số hình ảnh minh họa và nội dung diễn đạt trong Ứng dụng có thể được tạo ra hoặc hỗ trợ bởi các công nghệ trí tuệ nhân tạo trong quá trình xây dựng nội dung.</p>
+
+<p>Các công cụ AI chỉ được sử dụng nhằm hỗ trợ biên soạn nội dung và dịch thuật. AI không tự động đưa ra chẩn đoán y khoa hoặc cung cấp tư vấn y tế cá nhân hóa.</p>
+
+<p>Tất cả nội dung liên quan đến sức khỏe đều được rà soát và chỉnh sửa nhằm đảm bảo tính rõ ràng và chính xác. Thông tin trong Ứng dụng chỉ mang tính chất giáo dục và tham khảo chung, không thay thế cho tư vấn y tế chuyên môn.</p>
+
+<p>Bản dịch có thể được hỗ trợ bởi công cụ ngôn ngữ AI và được kiểm tra lại để đảm bảo độ chính xác.</p>
+
+<h2>Thay đổi chính sách</h2>
+
+<p>Chính sách này có thể được cập nhật theo thời gian. Phiên bản mới sẽ được đăng trên trang này kèm ngày hiệu lực được cập nhật.</p>
+
+<p><strong>Ngày hiệu lực:</strong> 2026-03-01</p>
+<p><strong>Liên hệ:</strong> phannhatd@gmail.com</p>
+
+</div>
+
+<script>
+function showLang(lang) {
+  document.getElementById('en').classList.remove('active');
+  document.getElementById('vi').classList.remove('active');
+  document.getElementById('btn-en').classList.remove('active');
+  document.getElementById('btn-vi').classList.remove('active');
+  document.getElementById(lang).classList.add('active');
+  document.getElementById('btn-' + lang).classList.add('active');
+}
+</script>
 
 </body>
 </html>
